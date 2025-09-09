@@ -4,7 +4,7 @@ import numpy as np
 import joblib
 
 # Load trained model
-model = joblib.load("models\decisiontree_model.pkl")
+model = joblib.load("decisiontree_model.pkl")
 
 def predict():
     try:
@@ -56,4 +56,5 @@ predict_btn = tk.Button(
 predict_btn.grid(row=len(labels), column=0, pady=15)
 
 # Run the application
+
 root.mainloop()
