@@ -6,7 +6,7 @@ from sklearn.tree import DecisionTreeClassifier
 from imblearn.over_sampling import SMOTE
 
 #load dataset
-df = pd.read_csv("Datasets\diabetes.csv")
+df = pd.read_csv("diabetes.csv")
 
 x= df.drop("Outcome",axis=1)
 y = df["Outcome"]
@@ -36,5 +36,6 @@ y_pred = model.predict(x_test)
 print(f"Accuracy:{accuracy_score(y_test,y_pred)*100:}%")
 
 #save model
-jb.dump(model,"models\decisiontree_model.pkl")
+jb.dump(model,"decisiontree_model.pkl")
 print("Model saved as decisiontree_model.pkl ")
+
