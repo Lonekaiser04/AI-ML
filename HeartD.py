@@ -4,7 +4,7 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.metrics import accuracy_score, classification_report
 
-df = pd.read_csv("Datasets\sample_heart.csv") 
+df = pd.read_csv("sample_heart.csv") 
 
 
 print("Sample Data:")
@@ -54,4 +54,5 @@ try:
     print("\nPrediction Result:", " Heart Disease Detected" if user_pred[0] == 1 else " No Heart Disease")
 
 except Exception as e:
+
     print("Invalid input:", e)
